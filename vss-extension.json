@@ -1,0 +1,50 @@
+{
+    "manifestVersion": 1,
+    "id": "deployToAzureAnalysisServices",
+    "name": "Deploy to Azure Analysis Services",
+    "version": "1.0.0",
+    "publisher": "christoph-bergmeister",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Deploy to Azure Analysis Services",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "tags" :[
+		"Deployment",
+        "Azure Analysis Services",
+        "AAS",
+        "XMLA",
+		"Analyis Services"
+	],
+    "content":{
+
+        "details":{
+            "path": "README.md"
+        },
+
+        "license": {
+            "path": "LICENCE"
+        }
+    },
+    "files": [
+        {
+            "path": "deployToAzureAnalysisServices"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "deploy-to-azure-analysis-services-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "deployToAzureAnalysisServices"
+            }
+        }
+    ]
+}
