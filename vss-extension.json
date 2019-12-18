@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "deployToAzureAnalysisServices",
     "name": "Deploy to Azure Analysis Services",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "publisher": "christoph-bergmeister",
     "targets": [
         {

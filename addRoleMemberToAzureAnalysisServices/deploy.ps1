@@ -24,10 +24,11 @@ $password = ConvertTo-SecureString $spnSecret -AsPlainText -Force
 $pscredential = New-Object System.Management.Automation.PSCredential($spnId, $password)
 
 $azureAnalysisServerName = Get-VstsInput -Name 'azureAnalysisServerName'
-$xmlaFilePath = (Get-VstsInput -Name 'xmlaFilePath')
-if (-not (Test-Path $xmlaFilePath)) {
-    Write-Error "XMLA file does not exist at path '$xmlaFilePath'"
-}
+$modelName = Get-VstsInput -Name 'modelName'
+$roleName = Get-VstsInput -Name 'roleName'
+$memberToAdd = Get-VstsInput -Name 'memberToAdd'
 
-Write-Verbose "Deploying to Azure Analyis Server $azureAnalysisServerName using XMLA file from path '$xmlaFilePath'" -Verbose
+
+Write-Verbose "Adding member '$memberToAdd' to role '$roleName' in model/database '$modelName' to Azure Analyis Server '$azureAnalysisServerName'" -Verbose
 Invoke-ASCmd -InputFile $xmlaFilePath -Server $azureAnalysisServerName -Credential $pscredential -ServicePrincipal
+Add-RoleMember -MemberName $memberToAdd -Database $modelName -RoleName $roleName -Server $azureAnalysisServerName -Credential $pscredential -ServicePrincipal

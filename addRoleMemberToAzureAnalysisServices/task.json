@@ -1,15 +1,15 @@
 {
-    "id": "f3013eb7-8703-4198-aa5a-77b90daea7dd",
-    "name": "deployToAzureAnalysisServices",
-    "friendlyName": "Deploy to Azure Analysis Services",
-    "description": "Deploys XMLA file produced by Analysis Services model to Azure Analysis Services",
+    "id": "c306f58e-73d0-4233-9bee-fbe13a0bcd13",
+    "name": "addRoleMemberToAzureAnalysisServices",
+    "friendlyName": "Add member to existing role in Azure Analysis Services database/model",
+    "description": "Adds member to existing role in Azure Analysis Services database/model",
     "helpMarkDown": "",
     "category": "Utility",
     "author": "Christoph Bergmeister",
     "version": {
         "Major": 1,
         "Minor": 0,
-        "Patch": 2
+        "Patch": 0
     },
     "instanceNameFormat": "Deploy to Azure Analysis Services server $(azureAnalysisServerName)",
     "inputs": [
@@ -22,20 +22,36 @@
             "helpMarkDown": "Select the Azure Resource Manager service endpoint for the deployment."
         },
         {
-            "name": "xmlaFilePath",
-            "type": "filePath",
-            "label": "XMLA File Path",
-            "required": true,
-            "defaultValue": "",
-            "helpMarkDown": "Path of the XMLA file. Must be a fully qualified path or relative to $(System.DefaultWorkingDirectory)."
-        },
-        {
             "name": "azureAnalysisServerName",
             "type": "string",
             "label": "Azure Analysis Server name",
             "defaultValue": "asazure://region.asazure.windows.net/MyAzureAnalysisServerName",
             "required": true,
             "helpMarkDown": "Azure Analysis Server Name"
+        },
+        {
+            "name": "modelName",
+            "type": "string",
+            "label": "Model/Database Name",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Model/Database Name"
+        },
+        {
+            "name": "roleName",
+            "type": "string",
+            "label": "Role name",
+            "defaultValue": "Read",
+            "required": true,
+            "helpMarkDown": "Role Name"
+        },
+        {
+            "name": "memberToAdd",
+            "type": "string",
+            "label": "Member to be added to role",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Member to be added to role"
         }
     ],
     "execution": {
