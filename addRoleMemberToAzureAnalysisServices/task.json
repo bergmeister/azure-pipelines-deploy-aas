@@ -11,7 +11,7 @@
         "Minor": 0,
         "Patch": 0
     },
-    "instanceNameFormat": "Deploy to Azure Analysis Services server $(azureAnalysisServerName)",
+    "instanceNameFormat": "Add member $(memberToAdd) to existing role $(roleName) in Azure Analysis Services database/model $(modelName)",
     "inputs": [
         {
             "name": "connectedServiceName",
@@ -38,7 +38,7 @@
             "helpMarkDown": "Model/Database Name"
         },
         {
-            "name": "roleName",
+            "name": "",
             "type": "string",
             "label": "Role name",
             "defaultValue": "Read",

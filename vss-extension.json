@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "deployToAzureAnalysisServices",
     "name": "Deploy to Azure Analysis Services",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "publisher": "christoph-bergmeister",
     "targets": [
         {
@@ -16,6 +16,8 @@
     "tags" :[
 		"Deployment",
         "Azure Analysis Services",
+        "Add member to role",
+        "Roles",
         "AAS",
         "XMLA",
 		"Analyis Services"
@@ -33,6 +35,9 @@
     "files": [
         {
             "path": "deployToAzureAnalysisServices"
+        },
+        {
+            "path": "addRoleMemberToAzureAnalysisServices"
         }
     ],
     "contributions": [
@@ -44,6 +49,16 @@
             ],
             "properties": {
                 "name": "deployToAzureAnalysisServices"
+            }
+        },
+        {
+            "id": "add-member-to-role-azure-analysis-services-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "addRoleMemberToAzureAnalysisServices"
             }
         }
     ]
