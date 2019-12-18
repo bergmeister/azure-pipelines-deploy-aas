@@ -9,7 +9,7 @@
     "version": {
         "Major": 1,
         "Minor": 0,
-        "Patch": 1
+        "Patch": 2
     },
     "instanceNameFormat": "Add member $(memberToAdd) to existing role $(roleName) in Azure Analysis Services database/model $(modelName)",
     "inputs": [
@@ -38,7 +38,7 @@
             "helpMarkDown": "Model/Database Name"
         },
         {
-            "name": "",
+            "name": "roleName",
             "type": "string",
             "label": "Role name",
             "defaultValue": "Read",

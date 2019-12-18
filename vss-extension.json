@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "deployToAzureAnalysisServices",
     "name": "Deploy to Azure Analysis Services",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "publisher": "christoph-bergmeister",
     "targets": [
         {
@@ -21,7 +21,12 @@
         "AAS",
         "XMLA",
 		"Analyis Services"
-	],
+    ],
+    "links": {
+        "support": {
+          "uri": "https://github.com/bergmeister/azure-pipelines-deploy-aas/issues"
+        }
+      },
     "content":{
 
         "details":{
