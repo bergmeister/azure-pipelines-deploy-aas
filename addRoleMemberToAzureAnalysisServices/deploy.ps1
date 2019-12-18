@@ -30,5 +30,4 @@ $memberToAdd = Get-VstsInput -Name 'memberToAdd'
 
 
 Write-Verbose "Adding member '$memberToAdd' to role '$roleName' in model/database '$modelName' to Azure Analyis Server '$azureAnalysisServerName'" -Verbose
-Invoke-ASCmd -InputFile $xmlaFilePath -Server $azureAnalysisServerName -Credential $pscredential -ServicePrincipal
 Add-RoleMember -MemberName $memberToAdd -Database $modelName -RoleName $roleName -Server $azureAnalysisServerName -Credential $pscredential -ServicePrincipal
