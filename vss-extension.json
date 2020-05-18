@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "deployToAzureAnalysisServices",
     "name": "Deploy to Azure Analysis Services",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "publisher": "christoph-bergmeister",
     "targets": [
         {
@@ -66,5 +66,6 @@
                 "name": "addRoleMemberToAzureAnalysisServices"
             }
         }
-    ]
+    ],
+    "public": true
 }
